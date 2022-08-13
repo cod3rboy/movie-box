@@ -5,12 +5,13 @@ import {
   Button,
   Container,
   Box,
+  IconButton,
 } from "@mui/material";
 import MoviesIcon from "@mui/icons-material/LocalMovies";
-import AddCircleIcon from "@mui/icons-material/PlaylistAddCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { styled } from "@mui/system";
 import useCurrentPage from "../../Hooks/useCurrentPage";
+import useMuiMediaQuery from "../../Hooks/useMuiMediaQuery";
 
 const BrandName = styled(Typography)({
   flexGrow: 1,
@@ -24,6 +25,7 @@ const MenuButton = styled(Button)({
 
 function Header() {
   const { changePage } = useCurrentPage();
+  const { sm } = useMuiMediaQuery();
   return (
     <AppBar component="nav" position="sticky">
       <Toolbar>
@@ -44,18 +46,24 @@ function Header() {
           </BrandName>
         </Container>
         <Box>
-          <MenuButton
-            variant="secondary"
-            startIcon={<AddCircleIcon />}
-            onClick={() => {
-              changePage("new-movie");
-            }}
-          >
-            New Movie
-          </MenuButton>
-          <MenuButton variant="secondary" startIcon={<FavoriteIcon />}>
-            Favourites
-          </MenuButton>
+          {sm && (
+            <MenuButton
+              onClick={() => changePage("favourites")}
+              variant="secondary"
+              startIcon={<FavoriteIcon />}
+            >
+              Favourites
+            </MenuButton>
+          )}
+          {!sm && (
+            <IconButton
+              onClick={() => changePage("favourites")}
+              title="Favourites"
+              sx={{ color: "#fff" }}
+            >
+              <FavoriteIcon />
+            </IconButton>
+          )}
         </Box>
       </Toolbar>
     </AppBar>
