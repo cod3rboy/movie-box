@@ -39,7 +39,6 @@ function MoviesProvider(props) {
     };
     const onLikeMovie = (event) => {
       const movieId = event.detail;
-      console.info("Liking movie: ", movieId);
       const updatedMovies = getMovies();
       const targetMovieIdx = updatedMovies.findIndex(
         (movie) => movie.id === movieId
