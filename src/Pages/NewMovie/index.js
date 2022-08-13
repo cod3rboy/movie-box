@@ -21,7 +21,6 @@ function NewMovie() {
         }}
       >
         <MovieForm
-          submitLabel="Save"
           onSubmit={(movie) => {
             add(movie);
             changePage("home", {

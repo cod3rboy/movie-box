@@ -9,10 +9,12 @@ import {
   Button,
   IconButton,
   InputAdornment,
+  Fab,
 } from "@mui/material";
 import { MobileDatePicker as DatePicker } from "@mui/x-date-pickers";
 import { Box } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
+import SaveIcon from "@mui/icons-material/Save";
 import useMovieStore from "../../Hooks/useMovieStore";
 import MovieSelect from "../MovieSelect";
 import moment from "moment";
@@ -31,13 +33,7 @@ const initialState = {
 };
 
 function MovieForm(props) {
-  const {
-    movie,
-    submitLabel = "submit",
-    onSubmit,
-    resetOnSubmit = true,
-    readOnly = false,
-  } = props;
+  const { movie, onSubmit, resetOnSubmit = true, readOnly = false } = props;
   const { movies } = useMovieStore();
 
   const [formData, setFormData] = useState(
@@ -136,6 +132,7 @@ function MovieForm(props) {
 
   return (
     <Grid
+      id="movie-form"
       container
       component="form"
       method="GET"
@@ -517,22 +514,24 @@ function MovieForm(props) {
           </Box>
         </Container>
       </Grid>
-      <Grid item xs={12}>
-        {!readOnly && (
-          <Button
-            variant="contained"
-            type="submit"
-            sx={{
-              display: "block",
-              textTransform: "capitalize",
-              margin: "1rem auto",
-            }}
-            disabled={!activateSubmit}
-          >
-            {submitLabel}
-          </Button>
-        )}
-      </Grid>
+      {!readOnly && (
+        <Fab
+          type="submit"
+          form="movie-form"
+          sx={{
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+            marginRight: "1rem",
+            marginBottom: "1rem",
+          }}
+          color="primary"
+          aria-label="save movie"
+          disabled={!activateSubmit}
+        >
+          <SaveIcon />
+        </Fab>
+      )}
     </Grid>
   );
 }

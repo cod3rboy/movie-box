@@ -31,7 +31,6 @@ function MovieDetail() {
         <MovieForm
           movie={data}
           readOnly={!editMode}
-          submitLabel="Save"
           resetOnSubmit={false}
           onSubmit={(movie) => {
             store.update(movie);
