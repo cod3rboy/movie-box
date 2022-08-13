@@ -5,7 +5,6 @@ import MovieDetail from "./Pages/MovieDetail";
 import NewMovie from "./Pages/NewMovie";
 import SearchResults from "./Pages/SearchResults";
 
-//TODO: Make Edit Fab changed with Save Fab on edit mode. Use `render` prop in MovieForm to enable this.
 //TODO: Make MovieForm responsive
 
 function App() {
