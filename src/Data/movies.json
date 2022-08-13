@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "The Lion King",
+    "plot": "A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father. While the uncle rules with an iron paw, the prince grows up beyond the Savannah, living by a philosophy: No worries for the rest of your days. But when his past comes to haunt him, the young prince must decide his fate: Will he remain an outcast or face his demons and become what he needs to be?",
+    "duration": "1h 29m",
+    "rating": 83,
+    "release": "10-10-1994",
+    "cast": [
+      "Matthew Broderick",
+      "James Earl Jones",
+      "Jeremy Irons",
+      "Rowan Atkinson",
+      "Moira Kelly",
+      "Whoopi Goldberg",
+      "Cheech Marin",
+      "Jim Cummings",
+      "Robert Guillaume"
+    ],
+    "genre": ["Family", "Animation", "Drama"],
+    "languages": ["English"]
+  },
+  {
+    "id": 2,
+    "name": "Jurassic World Dominion",
+    "plot": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures.",
+    "duration": "2h 27m",
+    "rating": 70,
+    "release": "10-06-2022",
+    "cast": [
+      "Chris Pratt",
+      "Bryce Dallas Howard",
+      "Laura Dern",
+      "Jeff Goldblum",
+      "Sam Neill",
+      "DeWanda Wise",
+      "Mamoudou Athie",
+      "Isabella Sermon",
+      "Campbell Scott"
+    ],
+    "genre": ["Adventure", "Action", "Science Fiction"],
+    "languages": ["English"]
+  },
+  {
+    "id": 3,
+    "name": "Shutter Island",
+    "plot": "World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane, but his efforts are compromised by his troubling visions and also by a mysterious doctor.",
+    "duration": "2h 18m",
+    "rating": 82,
+    "release": "18-02-2010",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Mark Ruffalo",
+      "Ben Kingsley",
+      "Emily Mortimer",
+      "Max von Sydow",
+      "Michelle Williams",
+      "Jackie Earle Haley",
+      "Patricia Clarkson",
+      "Ted Levine"
+    ],
+    "genre": ["Drama", "Thriller", "Mystery"],
+    "languages": ["English"]
+  },
+  {
+    "id": 4,
+    "name": "Andhadhun",
+    "plot": "A series of mysterious events changes the life of a blind pianist who now must report a crime that was actually never witnessed by him.",
+    "duration": "2h 19m",
+    "rating": 77,
+    "release": "05-10-2018",
+    "cast": [
+      "Ayushmann Khurrana",
+      "Radhika Apte",
+      "Tabu",
+      "Anil Dhawan",
+      "Rashmi Agdekar",
+      "Zakir Hussain",
+      "Ashwini Kalsekar",
+      "Manav Vij",
+      "Gopal Singh"
+    ],
+    "genre": ["Crime", "Thriller", "Comedy"],
+    "languages": ["Hindi"]
+  },
+  {
+    "id": 5,
+    "name": "The Shawshank Redemption",
+    "plot": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "duration": "2h 22m",
+    "rating": 87,
+    "release": "14-10-1994",
+    "cast": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "William Sadler",
+      "Clancy Brown",
+      "Gil Bellows",
+      "Mark Rolston",
+      "James Whitmore",
+      "Jeffrey DeMunn"
+    ],
+    "genre": ["Drama", "Crime"],
+    "languages": ["English"]
+  },
+  {
+    "id": 6,
+    "name": "The Dark Knight",
+    "plot": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+    "duration": "2h 32m",
+    "rating": 85,
+    "release": "18-07-2008",
+    "cast": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Michael Caine",
+      "Gary Oldman",
+      "Aaron Eckhart",
+      "Maggie Gyllenhaal",
+      "Morgan Freeman",
+      "Nestor Carbonell",
+      "Monique Gabriela Curnen"
+    ],
+    "genre": ["Drama", "Crime", "Action", "Thriller"],
+    "languages": ["English"]
+  },
+  {
+    "id": 7,
+    "name": "The Lord of the Rings: The Return of the King",
+    "plot": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm.",
+    "duration": "3h 21m",
+    "rating": 85,
+    "release": "06-02-2004",
+    "cast": [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Liv Tyler",
+      "Viggo Mortensen",
+      "Sean Astin",
+      "Cate Blanchett",
+      "John Rhys-Davies",
+      "Bernard Hill",
+      "Christopher Lee"
+    ],
+    "genre": ["Adventure", "Fantasy", "Action"],
+    "languages": ["English"]
+  },
+  {
+    "id": 8,
+    "name": "Titanic",
+    "plot": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi win third-class tickets aboard the ship. Rose tells the whole story from Titanic's departure through to its death—on its first and last voyage—on April 15, 1912.",
+    "duration": "3h 14m",
+    "rating": 79,
+    "release": "06-04-2012",
+    "cast": [
+      "Kate Winslet",
+      "Leonardo DiCaprio",
+      "Billy Zane",
+      "Gloria Stuart",
+      "Kathy Bates",
+      "Frances Fisher",
+      "Bill Paxton",
+      "Bernard Hill",
+      "David Warner"
+    ],
+    "genre": ["Drama", "Romance"],
+    "languages": ["English"]
+  },
+  {
+    "id": 9,
+    "name": "Django Unchained",
+    "plot": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+    "duration": "2h 45m",
+    "rating": 81,
+    "release": "29-03-2013",
+    "cast": [
+      "Jamie Foxx",
+      "Christoph Waltz",
+      "Leonardo DiCaprio",
+      "Kerry Washington",
+      "Samuel L. Jackson",
+      "Walton Goggins",
+      "Dennis Christopher",
+      "James Remar",
+      "David Steen"
+    ],
+    "genre": ["Drama", "Western"],
+    "languages": ["English"]
+  },
+  {
+    "id": 10,
+    "name": "Inception",
+    "plot": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: inception, the implantation of another person's idea into a target's subconscious.",
+    "duration": "2h 28m",
+    "rating": 84,
+    "release": "16-07-2010",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Ken Watanabe",
+      "Tom Hardy",
+      "Elliot Page",
+      "Dileep Rao",
+      "Cillian Murphy",
+      "Tom Berenger",
+      "Marion Cotillard"
+    ],
+    "genre": ["Action", "Science Fiction", "Adventure"],
+    "languages": ["English"]
+  }
+]
