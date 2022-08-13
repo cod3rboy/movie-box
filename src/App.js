@@ -5,8 +5,6 @@ import MovieDetail from "./Pages/MovieDetail";
 import NewMovie from "./Pages/NewMovie";
 import SearchResults from "./Pages/SearchResults";
 
-//TODO: Make MovieForm responsive
-
 function App() {
   return (
     <PageSwitch entry="home">

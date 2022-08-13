@@ -6,7 +6,6 @@ import {
   TextField,
   Typography,
   Rating,
-  Button,
   IconButton,
   InputAdornment,
   Fab,

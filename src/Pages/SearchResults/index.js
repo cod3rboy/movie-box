@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Layout from "../../Layout";
 import {
+  Box,
   Container,
   FormControl,
   InputLabel,
   MenuItem,
   Pagination,
-  Paper,
   Select,
   Typography,
 } from "@mui/material";
@@ -63,21 +63,17 @@ function SearchResults() {
   return (
     <Layout>
       <SearchBox onSearch={handleSearch} hideHeading={true} />
-      <Typography color="primary" variant="h4" sx={{ margin: "4vw 8vw" }}>
-        Search Results
-      </Typography>
-      <Paper
-        elevation={1}
-        sx={{
-          margin: "8vw 8vw",
-          padding: "6vw 6vw",
-        }}
-      >
+      <Container component="div">
+        <Typography color="primary" variant="h4" sx={{ margin: "1rem 0" }}>
+          Search Results
+        </Typography>
         {results.length === 0 && (
-          <Typography component="small" variant="body1" color="gray">
+          <Typography component="p" variant="body1" color="gray">
             No results found
           </Typography>
         )}
+      </Container>
+      <Box sx={{ margin: "1rem 0" }}>
         {results.length > 0 && (
           <>
             <Container>
@@ -149,7 +145,7 @@ function SearchResults() {
             )}
           </>
         )}
-      </Paper>
+      </Box>
     </Layout>
   );
 }

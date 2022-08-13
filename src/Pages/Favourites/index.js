@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Layout from "../../Layout";
-import { Paper, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import useCurrentPage from "../../Hooks/useCurrentPage";
 import useMovieStore from "../../Hooks/useMovieStore";
 import MovieList from "../../Components/MovieList";
@@ -15,21 +15,17 @@ function Favourites() {
 
   return (
     <Layout>
-      <Typography color="primary" variant="h4" sx={{ margin: "4vw 8vw" }}>
-        Favourites
-      </Typography>
-      <Paper
-        elevation={1}
-        sx={{
-          margin: "8vw 8vw",
-          padding: "6vw 6vw",
-        }}
-      >
+      <Container component="div">
+        <Typography color="primary" variant="h4" sx={{ margin: "1rem 0" }}>
+          Favourites
+        </Typography>
         {favMovies.length === 0 && (
-          <Typography component="p" variant="body2" color="gray">
+          <Typography component="p" variant="body1" color="gray">
             No favourite movies
           </Typography>
         )}
+      </Container>
+      <Box>
         {favMovies.length > 0 && (
           <MovieList
             movies={favMovies}
@@ -38,7 +34,7 @@ function Favourites() {
             hideHeading={true}
           />
         )}
-      </Paper>
+      </Box>
     </Layout>
   );
 }
