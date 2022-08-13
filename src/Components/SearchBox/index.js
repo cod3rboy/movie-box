@@ -10,7 +10,9 @@ import SearchIcon from "@mui/icons-material/Search";
 
 function SearchBox(props) {
   return (
-    <Container sx={{ padding: "1rem", display: "flex", flexFlow: "column" }}>
+    <Container
+      sx={{ padding: "1rem", display: "flex", flexFlow: "column", ...props.sx }}
+    >
       <Typography variant="h6" color="primary">
         Search
       </Typography>

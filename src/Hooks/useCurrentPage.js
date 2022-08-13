@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { useCallback, useContext, useMemo } from "react";
 import { context } from "../Components/PageSwitch";
 
 function useCurrentPage() {
-  const { page, data, query } = useContext(context);
-  const changePage = (pageName, data, query) => {
+  const pageContext = useContext(context);
+  const changePage = useCallback((pageName, data, query) => {
     window.dispatchEvent(
       new CustomEvent("pagechange", {
         detail: {
@@ -13,8 +13,17 @@ function useCurrentPage() {
         },
       })
     );
-  };
-  return { page, changePage, data, query };
+  }, []);
+  const hookValue = useMemo(
+    () => ({
+      page: pageContext.page,
+      data: pageContext.data,
+      query: pageContext.query,
+      changePage,
+    }),
+    [pageContext, changePage]
+  );
+  return hookValue;
 }
 
 export default useCurrentPage;

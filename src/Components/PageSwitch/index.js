@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 const pageContext = React.createContext();
 
@@ -12,7 +12,10 @@ function PageSwitch(props) {
       Object.fromEntries(new URL(window.location.href).searchParams.entries()),
     []
   );
-  const pageNames = new Set(children.map((c) => c.props.name));
+  const pageNames = useMemo(
+    () => new Set(children.map((c) => c.props.name)),
+    [children]
+  );
   const [page, setPage] = useState(() => {
     const initialPage = { query };
     const pageName = new URL(window.location.href).pathname
@@ -22,30 +25,32 @@ function PageSwitch(props) {
     initialPage.name = initialPage.name ?? "";
     return initialPage;
   });
-  const handlePageChanged = (event) => {
+
+  const handlePageChanged = useCallback((event) => {
     setPage({
       name: event.detail.name,
       data: event.detail.data,
       query: event.detail.query,
     });
-  };
+  }, []);
   useEffect(() => {
     window.addEventListener("pagechange", handlePageChanged);
     return () => {
       window.removeEventListener("pagechange", handlePageChanged);
     };
-  }, []);
+  }, [handlePageChanged]);
 
-  const handleBrowserNavigation = (event) => {
+  const handleBrowserNavigation = useCallback((event) => {
     const pageState = event.state;
     setPage(pageState);
-  };
+  }, []);
+
   useEffect(() => {
     window.addEventListener("popstate", handleBrowserNavigation);
     return () => {
       window.removeEventListener("popstate", handleBrowserNavigation);
     };
-  }, []);
+  }, [handleBrowserNavigation]);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(Object.entries(page.query ?? []));
@@ -68,4 +73,4 @@ function PageSwitch(props) {
   return <pageContext.Provider value={page}>{targetPage}</pageContext.Provider>;
 }
 
-export default PageSwitch;
+export default React.memo(PageSwitch);

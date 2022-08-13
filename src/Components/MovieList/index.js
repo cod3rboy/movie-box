@@ -3,12 +3,20 @@ import { Container, Box, Typography } from "@mui/material";
 import MovieCard from "../MovieCard";
 
 function MovieList(props) {
-  const { movies, onMovieLike, onMovieDetail, columns = 1 } = props;
+  const {
+    movies,
+    onMovieLike,
+    onMovieDetail,
+    columns = 1,
+    hideHeading = false,
+  } = props;
   return (
     <Container>
-      <Typography variant="h6" color="primary">
-        All Movies
-      </Typography>
+      {!hideHeading && (
+        <Typography variant="h6" color="primary">
+          All Movies
+        </Typography>
+      )}
       <Box
         display="grid"
         sx={{ padding: "1rem 0" }}
