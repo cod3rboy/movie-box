@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Typography,
   TextField,
@@ -9,22 +9,35 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 
 function SearchBox(props) {
+  const { sx, onSearch, hideHeading = false } = props;
+  const [keyword, setKeyword] = useState("");
   return (
     <Container
-      sx={{ padding: "1rem", display: "flex", flexFlow: "column", ...props.sx }}
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (onSearch && typeof onSearch === "function" && keyword !== "") {
+          onSearch(keyword);
+        }
+      }}
+      component="form"
+      sx={{ padding: "1rem", display: "flex", flexFlow: "column", ...sx }}
     >
-      <Typography variant="h6" color="primary">
-        Search
-      </Typography>
+      {!hideHeading && (
+        <Typography variant="h6" color="primary">
+          Search
+        </Typography>
+      )}
       <TextField
         id="search-box"
+        value={keyword}
+        onInput={(e) => setKeyword(e.target.value)}
         size="small"
         hiddenLabel
         placeholder="movie name or genre"
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton aria-label="search movie" edge="end">
+              <IconButton type="submit" aria-label="search movie" edge="end">
                 <SearchIcon />
               </IconButton>
             </InputAdornment>

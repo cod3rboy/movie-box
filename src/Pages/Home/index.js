@@ -10,9 +10,12 @@ import AddIcon from "@mui/icons-material/Add";
 function Home() {
   const { movies, toggleLike } = useMovieStore();
   const { changePage } = useCurrentPage();
+  const handleSearch = (keyword) => {
+    changePage("search-results", null, { q: keyword });
+  };
   return (
     <Layout>
-      <SearchBox />
+      <SearchBox onSearch={handleSearch} />
       <MovieList
         columns={2}
         movies={movies}
