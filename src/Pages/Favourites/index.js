@@ -32,7 +32,6 @@ function Favourites() {
         )}
         {favMovies.length > 0 && (
           <MovieList
-            columns={2}
             movies={favMovies}
             onMovieLike={(id) => store.toggleLike(id)}
             onMovieDetail={(movie) => page.changePage("movie-detail", movie)}

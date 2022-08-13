@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
 import MovieCard from "../MovieCard";
+import useMuiMediaQuery from "../../Hooks/useMuiMediaQuery";
 
 function MovieList(props) {
-  const {
-    movies,
-    onMovieLike,
-    onMovieDetail,
-    columns = 1,
-    hideHeading = false,
-  } = props;
+  const { movies, onMovieLike, onMovieDetail, hideHeading = false } = props;
+  let listCols = 1;
+  const { sm, md, lg } = useMuiMediaQuery();
+  if (sm) listCols = 2;
+  if (md) listCols = 3;
+  if (lg) listCols = 4;
   return (
     <Container>
       {!hideHeading && (
@@ -21,7 +21,7 @@ function MovieList(props) {
         display="grid"
         sx={{ padding: "1rem 0" }}
         gridTemplateRows="repeat(1fr)"
-        gridTemplateColumns={"1fr ".repeat(columns)}
+        gridTemplateColumns={"1fr ".repeat(listCols)}
         gap={1}
       >
         {movies.map((movie) => (

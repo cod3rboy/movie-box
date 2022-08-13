@@ -13,11 +13,11 @@ function Home() {
   const handleSearch = (keyword) => {
     changePage("search-results", null, { q: keyword });
   };
+
   return (
     <Layout>
       <SearchBox onSearch={handleSearch} />
       <MovieList
-        columns={2}
         movies={movies}
         onMovieLike={(id) => toggleLike(id)}
         onMovieDetail={(movie) => changePage("movie-detail", movie)}

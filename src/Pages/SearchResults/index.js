@@ -49,7 +49,7 @@ function SearchResults() {
     return results;
   }, [keyword, store.movies, lang]);
 
-  const [limit, setLimit] = useState(2);
+  const [limit, setLimit] = useState(5);
   const [offset, setOffset] = useState(0);
   const pageCount = Math.ceil(results.length / limit);
   const end = Math.min(offset + limit, results.length);
@@ -57,6 +57,7 @@ function SearchResults() {
 
   const handleSearch = (keyword) => {
     page.changePage("search-results", null, { q: keyword });
+    setOffset(0);
   };
 
   return (
@@ -97,9 +98,9 @@ function SearchResults() {
                   label="Per Page"
                   onChange={(e) => {
                     setLimit(parseInt(e.target.value));
+                    setOffset(0);
                   }}
                 >
-                  <MenuItem value={2}>2</MenuItem>
                   <MenuItem value={5}>5</MenuItem>
                   <MenuItem value={10}>10</MenuItem>
                   <MenuItem value={15}>15</MenuItem>
@@ -118,6 +119,7 @@ function SearchResults() {
                   label="Langauge"
                   onChange={(e) => {
                     setLang(e.target.value);
+                    setOffset(0);
                   }}
                 >
                   <MenuItem value="any">Any</MenuItem>
@@ -127,7 +129,6 @@ function SearchResults() {
               </FormControl>
             </Container>
             <MovieList
-              columns={2}
               movies={pageResults}
               onMovieLike={(id) => store.toggleLike(id)}
               onMovieDetail={(movie) => page.changePage("movie-detail", movie)}
